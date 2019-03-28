@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BC9DDF3-8643-4614-AF64-CABBA4A9ED54}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Eat</RootNamespace>
+    <AssemblyName>Eat</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>food_128px_1171558_easyicon.net.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBack.Designer.cs">
+      <DependentUpon>AboutBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFood.Designer.cs">
+      <DependentUpon>AddFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="DeskMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeskMenu.Designer.cs">
+      <DependentUpon>DeskMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMHelper.cs" />
+    <Compile Include="FoodMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoodMenu.Designer.cs">
+      <DependentUpon>FoodMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FoodMenuAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoodMenuAdd.Designer.cs">
+      <DependentUpon>FoodMenuAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pay.Designer.cs">
+      <DependentUpon>Pay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayOk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayOk.Designer.cs">
+      <DependentUpon>PayOk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="VIP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIP.Designer.cs">
+      <DependentUpon>VIP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIPAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIPAdd.Designer.cs">
+      <DependentUpon>VIPAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIPAddOk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIPAddOk.Designer.cs">
+      <DependentUpon>VIPAddOk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ok.Designer.cs">
+      <DependentUpon>Ok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIPLv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIPLv.Designer.cs">
+      <DependentUpon>VIPLv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YesNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YesNo.Designer.cs">
+      <DependentUpon>YesNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZhangDan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZhangDan.Designer.cs">
+      <DependentUpon>ZhangDan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutBack.resx">
+      <DependentUpon>AboutBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFood.resx">
+      <DependentUpon>AddFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeskMenu.resx">
+      <DependentUpon>DeskMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoodMenu.resx">
+      <DependentUpon>FoodMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoodMenuAdd.resx">
+      <DependentUpon>FoodMenuAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pay.resx">
+      <DependentUpon>Pay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayOk.resx">
+      <DependentUpon>PayOk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIP.resx">
+      <DependentUpon>VIP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIPAdd.resx">
+      <DependentUpon>VIPAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIPAddOk.resx">
+      <DependentUpon>VIPAddOk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ok.resx">
+      <DependentUpon>Ok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIPLv.resx">
+      <DependentUpon>VIPLv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YesNo.resx">
+      <DependentUpon>YesNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZhangDan.resx">
+      <DependentUpon>ZhangDan.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lhy018.jpg" />
+    <None Include="Resources\lhy019.jpg" />
+    <None Include="Resources\lhy020.jpg" />
+    <None Include="Resources\lhy021.jpg" />
+    <None Include="Resources\ljy001.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lhy0024.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lhy003.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lhy0041.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lhy005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lhy006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lhy0074.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lhy008.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lhy0091.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lhy010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lhy011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lhy0133.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lhy0147.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lhy015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lhy028.png" />
+    <None Include="Resources\lhy0272.png" />
+    <None Include="Resources\lhy026.png" />
+    <None Include="Resources\lhy025.png" />
+    <None Include="Resources\lhy024.png" />
+    <None Include="Resources\lhy023.png" />
+    <None Include="Resources\lhy022.png" />
+    <None Include="Resources\CJH电话.PNG" />
+    <None Include="Resources\CJH时间.PNG" />
+    <None Include="Resources\CJH姓名.PNG" />
+    <Content Include="food_128px_1171558_easyicon.net.ico" />
+    <Content Include="Resources\lhy0128.png" />
+    <None Include="Resources\lhy016.png" />
+    <None Include="Resources\lhy017.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
